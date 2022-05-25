@@ -13,20 +13,20 @@ import java.util.List;
 
 public class DataController {
 
-     static void parseCards() {
+     static List<Employee> parseCards() {
          File file = new File("src/test/resources/Employee.json");
+         List<Employee> employeesList = new ArrayList<Employee>();
          try (FileReader reader = new FileReader(file)) {
              // Считываем содержимое файла в объект JsonObject
              int fileLen = (int) file.length();
              char[] chars = new char[fileLen];
              reader.read(chars);
              String s = String.valueOf(chars);
-             System.out.println(s+"\n");
              JSONObject jsonObject = new JSONObject (s); // Это можно понимать как удаление самого внешнего {}
 
              // Анализ объекта JSONObject
              JSONArray employees = jsonObject.getJSONArray("employees");
-             List<Employee> employeesList = new ArrayList<Employee>();
+
              for (Object employee : employees) {
                  // Получаем единственный объект JSONObject
                  JSONObject employeeObject = (JSONObject) employee;
@@ -40,18 +40,13 @@ public class DataController {
                  emp.setPostId(employeeObject.getString("postId"));
                  employeesList.add(emp);
              }
-
-             System.out.println(employeesList.get(0).getFirstName());
-             System.out.println(employeesList.get(2).getFirstName());
-             /*employeesList.forEach(emp -> System.out.println(emp.getFirstName()));*/
-
          } catch (Exception e) {
              e.printStackTrace();
          }
-
+          return employeesList;
     }
 
     static void printCards(List<Employee> empCards){
-
+        empCards.forEach(emp -> emp.printCard());
     }
 }
