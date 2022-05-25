@@ -1,5 +1,5 @@
 {
-  "employees": [
+  "employees":[
     {
       "firstName":"Genady",
       "lastName": "Qzmin",
@@ -7,7 +7,8 @@
       "characteristics":["honest", "introvert", "like criticism", "love of Learning", "pragmatism"],
       "postId": "854ef89d-6c27-4635-926d-894d76a81707"
     },
-    {"firstName":"Ivan",
+    {
+      "firstName":"Ivan",
       "lastName": "Ivanov",
       "description":null,
       "characteristics":["honest", "introvert", "like criticism", "love of Learning"],
