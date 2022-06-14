@@ -1,13 +1,13 @@
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-
-import java.io.*;
-import java.util.ArrayList;
+import java.util.List;
+import java.util.UUID;
 
 public class Main {
-
+    static PostMap postMap = new PostMap();
     public static void main(String[] args) {
-        DataController.printCards(DataController.parseCards());
+        List<Employee> employeesList = DataController.parseCards("src/test/resources/Employees.json");
+        DataController.ascSortCards(employeesList,"lastName");
+        DataController.printCards(employeesList);
+
 
     }
 }
