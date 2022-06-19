@@ -1,17 +1,12 @@
 import java.util.ArrayList;
-import java.util.Set;
 
 public class Employee {
 
     String firstName;
     String lastName;
-    String description;
+    String description = " ";
     ArrayList<String> characteristics;
-    String postId;
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
+    Post post;
 
     public String getFirstName() {
         return firstName;
@@ -29,8 +24,12 @@ public class Employee {
         return characteristics;
     }
 
-    public String getPostId() {
-        return postId;
+    public Post getPost() {
+        return post;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
     public void setLastName(String lastName) {
@@ -45,17 +44,17 @@ public class Employee {
         this.characteristics = characteristics;
     }
 
-    public void setPostId(String postId) {
-        this.postId = postId;
+    public void setPost(Post post) {
+        this.post = post;
     }
 
     public void printCard(){
         System.out.println("firstName: " +getFirstName());
         System.out.println("lastName: " + getLastName());
         System.out.println("description: "+getDescription());
-        System.out.println("characteristics: "+getCharacteristics());
-        /*getCharacteristics().forEach(str -> System.out.println(str));*/
-        System.out.println("post: "+ getPostId());
-
+        System.out.print("characteristics: ");
+        getCharacteristics().forEach(str -> System.out.print(str+ ", ")); System.out.println();
+        System.out.println("post: "+ getPost().getName());
+        System.out.println();
     }
 }
