@@ -1,6 +1,7 @@
 {
   "employees":[
     {
+      "id":"a3dec21f-896b-4635-1187-96b580b494d7",
       "firstName":"Konstantin",
       "lastName": "Yakovlev",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum felis, eu fringilla eros. Sed et gravida neque. Nullam at egestas,,erat. Mauris vitae convallis nulla. Aenean condimentum lectus magna.Suspendisse viverra quam non ante pellentesque, a euismod nunc dapibus. Duissed congue erat",
@@ -8,6 +9,7 @@
       "postId": "854ef89d-6c27-4635-926d-894d76a81707"
     },
     {
+      "id":"a3dec21f-896b-4635-1187-894d70b494d7",
       "firstName":"Ivan",
       "lastName": "Ivanov",
       "description":null,
@@ -15,6 +17,7 @@
       "postId": "a3dec21f-1187-4b05-896b-96b580b453a5"
     },
     {
+      "id":"a896b21f-896b-4635-1187-96b580b494d7",
       "firstName":"Genady",
       "lastName": "Qzmin",
       "description": null,

@@ -1,13 +1,14 @@
-import java.util.List;
-import java.util.UUID;
+import service.employeeService.EmployeeServiceImpl;
+import service.printService.printCardsToConsole;
 
 public class Main {
-    static PostMap postMap = new PostMap();
-    public static void main(String[] args) {
-        List<Employee> employeesList = DataController.parseCards("src/test/resources/Employees.json");
-        DataController.ascSortCards(employeesList,"lastName");
-        DataController.printCards(employeesList);
 
+    public static void main(String[] args) {
+
+//        EmployeeServiceImpl employeeService = new EmployeeServiceImpl();
+//
+//        printCardsToConsole printCardsToConsole = new printCardsToConsole();
+//        printCardsToConsole.print(employeeService.getAllEmployees());
 
     }
 }
