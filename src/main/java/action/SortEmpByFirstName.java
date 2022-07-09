@@ -1,6 +1,8 @@
+package action;
 import java.util.Comparator;
+import model.Employee;
 
-public class SortEmployeesByFirstName implements Comparator<Employee> {
+public class SortEmpByFirstName implements Comparator<Employee> {
 
     @Override
     public int compare(Employee o1, Employee o2) {
